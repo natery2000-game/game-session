@@ -6,7 +6,7 @@ environment:
   VERSION: $(APPVEYOR_BUILD_VERSION)
 build_script:
   - sh: docker login -u $dockerhubuser -p $dockerhubpassword
-  - sh: export CONTAINER_VERSION="natery2000-game/game-session:${VERSION}"
+  - sh: export CONTAINER_VERSION="natery2000/game-session:${VERSION}"
   - sh: echo $CONTAINER_VERSION
   - sh: docker build -t $CONTAINER_VERSION .
   - sh: docker push $CONTAINER_VERSION
