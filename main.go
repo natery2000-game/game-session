@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	listenPort := "0.0.0.0:34000"
+	listenPort := "0.0.0.0:4000"
 	listener, err := net.Listen("tcp4", listenPort)
 	if err != nil {
 		fmt.Println(err)

@@ -7,4 +7,6 @@ RUN chmod u+x kubectl && mv kubectl /bin/kubectl
 
 RUN go install github.com/natery2000-game/game-session@latest
 
+EXPOSE 4000
+
 CMD ["game-session", "run"]
